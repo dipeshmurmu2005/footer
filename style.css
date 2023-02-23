@@ -3,7 +3,110 @@
     margin: 0;
     padding: 0;
 }
-.container{
+body{
     background-color:#f1f1f3;
-    height:100vh;
+}
+.container{
+    position: absolute;
+    width:100%;
+    display: flex;
+    height:auto;
+    justify-content: center;
+    bottom:2%;
+}
+.footer-container{
+    width:99%;
+    background-color:white;
+    height:250px;
+    border-radius:12px;
+    box-shadow:0px 0px 5px 0.2px rgb(0,0,0,0.1);
+    position: relative;
+}
+.footer-container .header{
+    text-align: center;
+    color:#6546a2;
+    font-family:dm sans;
+    font-weight:bolder;
+    padding:1%;
+    box-sizing: border-box;
+}
+.footer-container .links{
+    display:flex;
+    list-style:none;
+    justify-content: center;
+}
+.footer-container .links li{
+    margin:1%;
+}
+.footer-container .links li a{
+    text-decoration:none;
+    color:#6546a2;
+    font-family:roboto;
+    font-weight:bolder;
+}
+.footer-container .bottom-items{
+    position: absolute;
+    bottom:2%;
+    padding:4%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content:space-between;
+    width:100%;
+    align-items: center;
+}
+/* Subscribe email fill container */
+.footer-container .bottom-items .subscribe-container{
+    height:40px;
+    background-color:#f1f1f3;
+    border-radius:65px;
+    overflow: hidden;
+}
+.footer-container .bottom-items .subscribe-container input{
+    height:40px;
+    width:300px;
+    background-color:#f1f1f3;
+    border:none;
+    padding-left:5%;
+    outline:none;
+    box-sizing: border-box;
+}
+.footer-container .bottom-items .subscribe-container input::placeholder{
+    color:#6546a2;
+    font-weight:bolder;
+    font-family:roboto;
+}
+.footer-container .bottom-items .subscribe-container button{
+    height:40px;
+    border-radius:65px;
+    background-color:#6546a2;
+    width:100px;
+    color:white;
+    border:none;
+    cursor: pointer;
+}
+/* copyright text */
+.footer-container .bottom-items .bottom-texts{
+    color:#6546a2;
+    font-weight:bolder;
+    font-family:dm sans;
+}
+/* Reponsive For All Mobile Designs */
+@media screen and (max-width:1080px){
+    .footer-container{
+        height:auto;
+        padding:2%;
+        box-sizing: border-box;
+    }
+    .footer-container .links,.footer-container .bottom-items{
+        position: unset;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    .footer-container .bottom-items .bottom-texts{
+        margin-top:5%;
+        margin-bottom:5%;
+    }
+    .footer-container .bottom-items .subscribe-container input{
+        width:200px;
+    }
 }
